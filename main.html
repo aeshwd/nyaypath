@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyayPath | Your one Pathway to know Justice</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<audio src="Indian National Anthem _ Instrumental-yt.savetube.me.mp3" autoplay hidden loop></audio>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4 flex justify-between items-center">
+        
+        <h1 class="text-white text-2xl font-bold">NyayPath | Indian Laws</h1>
+        
+    </nav>
+
+    <!-- Search Bar -->
+
+    <div class="logo" style="display: flex; align-items: center; justify-content: center;">
+        <img src="logo.png" width="150px">
+    </div>
+    <div class="p-6 text-center">
+        <input type="text" id="searchBar" class="w-2/3 p-2 border rounded" placeholder="Search for a law...">
+    </div>
+
+    <!-- Law Categories -->
+    <div class="max-w-4xl mx-auto p-4">
+        <div class="space-y-4">
+
+            <div class="law bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <a href="laws/marriage-laws.html">
+                    <h2 class="text-xl font-semibold cursor-pointer hover:text-blue-600">💍 Marriage Laws</h2>
+                </a>
+            </div>
+
+            <div class="law bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <a href="laws/criminal-laws.html">
+                    <h2 class="text-xl font-semibold cursor-pointer hover:text-blue-600">⚖ Criminal Laws</h2>
+                </a>
+            </div>
+
+            <div class="law bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <a href="laws/civil-laws.html">
+                    <h2 class="text-xl font-semibold cursor-pointer hover:text-blue-600">🏛 Civil Laws</h2>
+                </a>
+            </div>
+
+            <div class="law bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <a href="laws/consumer-laws.html">
+                    <h2 class="text-xl font-semibold cursor-pointer hover:text-blue-600">🛒 Consumer Protection Laws</h2>
+                </a>
+            </div>
+
+            <div class="law bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <a href="laws/labor-laws.html">
+                    <h2 class="text-xl font-semibold cursor-pointer hover:text-blue-600">🛠 Labor & Employment Laws</h2>
+                </a>
+            </div>
+
+            <div class="law bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <a href="laws/cyber-laws.html">
+                    <h2 class="text-xl font-semibold cursor-pointer hover:text-blue-600">💻 Cyber Laws</h2>
+                </a>
+            </div>
+
+            <div class="law bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <a href="laws/constitutional-laws.html">
+                    <h2 class="text-xl font-semibold cursor-pointer hover:text-blue-600">📜 Constitutional Laws</h2>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("darkModeToggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
+
+// Search Functionality
+document.getElementById("searchBar").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+    let laws = document.querySelectorAll(".law");
+
+    laws.forEach(law => {
+        let title = law.querySelector("h2").innerText.toLowerCase();
+        if (title.includes(filter)) {
+            law.style.display = "block";
+        } else {
+            law.style.display = "none";
+        }
+    });
+});
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
